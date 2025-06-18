@@ -10,7 +10,7 @@ This project implements linear regression using NumPy without any ML libraries.
 
 ## Math Background
 Explain the normal equation and how it works:
-\[ \theta = (X^TX)^{-1}X^Ty \]
+$ \theta = (X^TX)^{-1}X^Ty $
 
 ## Screenshots
 (Add your plots here)
