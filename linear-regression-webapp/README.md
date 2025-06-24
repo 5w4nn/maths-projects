@@ -25,9 +25,9 @@ To build an educational and useful web tool that:
 ## 🧮 The Math Behind It
 
 This app uses the **closed-form solution** to linear regression, also known as the **normal equation**:
-$$
+$
 \theta = (X^T X)^{-1} X^T y
-$$
+$
 
 Where:
 
@@ -35,10 +35,10 @@ Where:
 - \( y \) is the target vector,
 - \( \theta \) is the learned parameter vector.
 
-This solution comes from minimizing the mean squared error (MSE) cost function with respect to \( \theta \).
-$$
+This solution comes from minimizing the mean squared error (MSE) cost function with respect to $ \theta $
+$
 J(\theta) = \frac{1}{2m} \sum_{i=1}^{m} \left( h_\theta(x^{(i)}) - y^{(i)} \right)^2
-$$
+$
 ---
 
 ## 🚀 Getting Started
@@ -69,6 +69,7 @@ bash
 Copy
 Edit
 streamlit run app.py
+
 📁 File Structure
 bash
 Copy
@@ -80,6 +81,7 @@ linear-regression-webapp/
 ├── requirements.txt      # Python dependencies
 ├── .gitignore            # Git exclusions
 └── venv/                 # Virtual environment (excluded from Git)
+
 📂 Example Data
 If the user doesn't upload a CSV file, the app provides generated test data using a random linear function with added noise.
 
@@ -92,6 +94,7 @@ x,y
 1,2.1
 2,4.3
 3,5.9
+
 ✅ Technologies Used
 Python
 
@@ -123,13 +126,5 @@ Copy
 Edit
 
 ---
-
-Let me know if you’d like a matching `requirements.txt`, a badge for the top (e.g., Python version), or a deployment section (e.g., for Streamlit Cloud or Hugging Face Spaces).
-
-
-
-
-
-
 
 
