@@ -57,4 +57,7 @@ if data is not None:
 
     x = x.reshape(-1,1)
     X = np.column_stack((np.ones(x.shape[0]),x))
-    st.write(X)
+    st.write(X) #the above code puts x into a matrix with the first column being 1s to represent the intercept
+
+
+#TODO: keep reading on normal equation linear regression.

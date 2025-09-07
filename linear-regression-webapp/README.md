@@ -31,14 +31,17 @@ $
 
 Where:
 
-- \( X \) is the feature matrix (with a column of 1s for bias),
-- \( y \) is the target vector,
-- \( \theta \) is the learned parameter vector.
 
-This solution comes from minimizing the mean squared error (MSE) cost function with respect to $ \theta $
+- ( X ) is the feature matrix (with a column of 1s for bias),
+- ( y ) is the target vector,
+- $( \theta ) $ is the learned parameter vector. 
+
+#### This solution comes from minimizing the mean squared error (MSE) cost function with respect to $ \theta $
 $
 J(\theta) = \frac{1}{2m} \sum_{i=1}^{m} \left( h_\theta(x^{(i)}) - y^{(i)} \right)^2
 $
+
+
 ---
 
 ## 🚀 Getting Started
