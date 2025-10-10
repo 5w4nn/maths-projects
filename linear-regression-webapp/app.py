@@ -25,7 +25,7 @@ if upload_option == "Upload CSV":
     else:
         data = None
 
-# --- Data Generation ---
+# --- Data Generation --- #
 else:
     num_points = st.sidebar.slider("Number of Data Points", 10, 200, 75)
     slope = st.sidebar.slider("Gradient (m)", -10.0, 10.0, 2.0)
@@ -36,7 +36,7 @@ else:
     data = pd.DataFrame({"x": x, "y": y})
     
 
-# --- Display Data ---
+# --- Display Data --- #
 if data is not None:
     st.subheader("Data Preview")
     #st.write(data.head())
