@@ -8,6 +8,18 @@ st.set_page_config(page_title="KNN and other algorithms", layout="centered")
 
 st.title("KNN and other algorithms,")
 
+# read le csv
+def read_csv(uploaded_file):
+  df = pd.read_csv(uploaded_file)
+  st.dataFrame(df.head()) # display the mf data
+
+# calculate euclidean distance of each data point
+def euclidean_distance(row1, row2):
+  row1 = 1
+  row2 = 2
+  st.write(row1 + row2)
+  return None
+
 # sidebar
 st.sidebar.header("Data Input Options")
 upload_option = st.sidebar.radio("Choose Data Input Method:", ("Upload CSV", "Generate Synthetic Data"))
@@ -16,6 +28,7 @@ if upload_option == "Upload CSV":
   if uploaded_file is not None:
     data = pd.read_csv(uploaded_file)
     st.write("Data Preview", data.head())
+    euclidean_distance()
   else:
     data = None
 
@@ -26,6 +39,8 @@ else:
   label_numerical = st.sidebar.number_input("Enter the classification label for each class you just created", min_value=1,)
 
 
-def parse_iris(uploaded_file):
-  return None
+# Fit data to be used for KNN
 
+
+
+# Display data
