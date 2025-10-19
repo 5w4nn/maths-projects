@@ -3,12 +3,12 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-# --- Page Configuration ---
+# title
 st.set_page_config(page_title="KNN and other algorithms", layout="centered")
 
 st.title("KNN and other algorithms,")
 
-# --- sidebar ---
+# sidebar
 st.sidebar.header("Data Input Options")
 upload_option = st.sidebar.radio("Choose Data Input Method:", ("Upload CSV", "Generate Synthetic Data"))
 if upload_option == "Upload CSV":
@@ -20,15 +20,12 @@ if upload_option == "Upload CSV":
     data = None
 
 # generator data using class number, label names and colours, amount of points and scatter options need to continue adding a numerical value for labels and the labels names
-
+# should i just use a damn freaking dataset? -> Probably yes
 else:
   label_numb = st.sidebar.number_input("Insert number of classes (labels) for classification 1-5",min_value=1, max_value=5, format="%0f")
-  for i in label_numb:
-    label_numerical = st.sidebar.number_input("Enter the classification label for each class you just created")
+  label_numerical = st.sidebar.number_input("Enter the classification label for each class you just created", min_value=1,)
 
 
-df = pd.DataFrame({
-  'first column': [1,2,3,4],
-  'second column':[10,20,30,40]
-})
-df
+def parse_iris(uploaded_file):
+  return None
+
