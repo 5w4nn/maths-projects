@@ -9,16 +9,25 @@ st.set_page_config(page_title="KNN and other algorithms", layout="centered")
 st.title("KNN and other algorithms,")
 
 # read le csv
-def read_csv(uploaded_file):
-  df = pd.read_csv(uploaded_file)
-  st.dataFrame(df.head()) # display the mf data
+def read_csv(file):
+  if file is not None:
+    df = pd.read_csv(file)
+    st.write("Data Preview", df.head())
+    parse_data(df)
+  else:
+    return None
+  return df
+
+
+# parse the data to be ready to have its euclidean distance calculated
+def parse_data(data_frame):
+  x = np.arange(data_frame[0])
+  st.write(x)
+  return x
 
 # calculate euclidean distance of each data point
-def euclidean_distance(row1, row2):
-  row1 = 1
-  row2 = 2
-  st.write(row1 + row2)
-  return None
+#def euclidean_distance(array):
+#  return float(np.linalg.norm(array))"""
 
 # sidebar
 st.sidebar.header("Data Input Options")
@@ -26,9 +35,8 @@ upload_option = st.sidebar.radio("Choose Data Input Method:", ("Upload CSV", "Ge
 if upload_option == "Upload CSV":
   uploaded_file = st.sidebar.file_uploader("Upload your CSV file", type=["csv"])
   if uploaded_file is not None:
-    data = pd.read_csv(uploaded_file)
-    st.write("Data Preview", data.head())
-    euclidean_distance()
+    read_csv(uploaded_file)
+    # euclidean_distance(uploaded_file)
   else:
     data = None
 
